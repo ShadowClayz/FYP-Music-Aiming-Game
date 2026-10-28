@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ctwp2xighw0s4"]
+
+[ext_resource type="Script" uid="uid://bweg03ov0wnq6" path="res://Scripts/game.gd" id="1_3dryh"]
+[ext_resource type="PackedScene" uid="uid://crfrce18q7gks" path="res://Scenes/environment.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://didj5e5s6etdo" path="res://Scenes/UI.tscn" id="2_wowpa"]
+[ext_resource type="PackedScene" uid="uid://b0qnuk5r3f6p6" path="res://Scenes/player.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://btiw5kw0tjhup" path="res://Scenes/wall_of_balls.tscn" id="3_wrm1d"]
+[ext_resource type="AudioStream" uid="uid://ig2vxdw6itjf" path="res://LockChime.wav" id="6_i6g32"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qxrlw"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_wrm1d"]
+sky_material = SubResource("ProceduralSkyMaterial_qxrlw")
+
+[sub_resource type="Environment" id="Environment_3dryh"]
+background_mode = 2
+sky = SubResource("Sky_wrm1d")
+glow_enabled = true
+
+[node name="Game" type="Node3D" unique_id=1488983780]
+script = ExtResource("1_3dryh")
+
+[node name="UI" parent="." unique_id=238702577 instance=ExtResource("2_wowpa")]
+
+[node name="Environment" parent="." unique_id=1366283253 instance=ExtResource("2_qxrlw")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1878743870]
+environment = SubResource("Environment_3dryh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=699471525]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=598979344 instance=ExtResource("2_wrm1d")]
+
+[node name="Wall of Balls" parent="." unique_id=104236221 instance=ExtResource("3_wrm1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75286436, -4.166914)
+
+[node name="HitSound" type="AudioStreamPlayer3D" parent="." unique_id=497639860]
+stream = ExtResource("6_i6g32")

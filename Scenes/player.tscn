@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b0qnuk5r3f6p6"]
+
+[ext_resource type="Script" uid="uid://bdyodk30y570t" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://b3mqht8g5sebj" path="res://Scripts/character_body_3d.gd" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://1mw385wevtao" path="res://Scenes/gun.tscn" id="3_6t5aa"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ni7q4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_brhb4"]
+
+[node name="Player" type="Node3D" unique_id=598979344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_cvnsp")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1142535428]
+script = ExtResource("1_v0iea")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=2078856031]
+mesh = SubResource("CapsuleMesh_ni7q4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1130557609]
+shape = SubResource("CapsuleShape3D_brhb4")
+
+[node name="Neck" type="Node3D" parent="CharacterBody3D" unique_id=623286685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6073108, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck" unique_id=254114531]
+fov = 103.0
+
+[node name="Gun" parent="CharacterBody3D/Neck/Camera3D" unique_id=105639386 instance=ExtResource("3_6t5aa")]
+transform = Transform3D(0.99755764, 0.06984675, 0, -0.06984676, 0.9975579, 0, 0, 0, 1, 0.18179297, -0.18373191, -0.44140932)
+
+[node name="AimRay" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D" unique_id=1648432392]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, -0.838)
+target_position = Vector3(0, 0, -100)
+collision_mask = 2
+collide_with_areas = true

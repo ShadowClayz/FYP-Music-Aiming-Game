@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://didj5e5s6etdo"]
+
+[ext_resource type="Texture2D" uid="uid://ciaypa7hla07w" path="res://crosshair-020.png" id="1_w371h"]
+[ext_resource type="Texture2D" uid="uid://dwo52m48wf8p6" path="res://crosshair-037.png" id="2_nxvpl"]
+
+[node name="UI" type="Node2D" unique_id=238702577]
+
+[node name="Crosshair" type="TextureRect" parent="." unique_id=1015337469]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 74.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w371h")
+metadata/_edit_use_anchors_ = true
+
+[node name="CrosshairHit" type="TextureRect" parent="." unique_id=1944034544]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 74.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nxvpl")
+metadata/_edit_use_anchors_ = true

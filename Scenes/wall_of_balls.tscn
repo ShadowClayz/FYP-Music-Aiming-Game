@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://btiw5kw0tjhup"]
+
+[ext_resource type="Script" uid="uid://bqiugxaicpsrd" path="res://Scripts/wall_of_balls.gd" id="1_jdfty"]
+[ext_resource type="PackedScene" uid="uid://ux33xj0ejboa" path="res://Scenes/ball.tscn" id="1_karic"]
+
+[node name="Wall of Balls" type="Node3D" unique_id=104236221]
+script = ExtResource("1_jdfty")
+
+[node name="Ball" parent="." unique_id=669377245 instance=ExtResource("1_karic")]
+
+[node name="Ball2" parent="." unique_id=1108432353 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0, 0)
+
+[node name="Ball3" parent="." unique_id=2042964464 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 0)
+
+[node name="Ball4" parent="." unique_id=1756100428 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0, 0)
+
+[node name="Ball5" parent="." unique_id=1734446631 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 0)
+
+[node name="Ball6" parent="." unique_id=30335923 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+
+[node name="Ball7" parent="." unique_id=1456126316 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.2, 0)
+
+[node name="Ball8" parent="." unique_id=509706988 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 1.2, 0)
+
+[node name="Ball9" parent="." unique_id=69214292 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 1.2, 0)
+
+[node name="Ball10" parent="." unique_id=182720741 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 1.2, 0)
+
+[node name="Ball11" parent="." unique_id=155137383 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0)
+
+[node name="Ball12" parent="." unique_id=1768999755 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 2.4, 0)
+
+[node name="Ball13" parent="." unique_id=84388378 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 2.4, 0)
+
+[node name="Ball14" parent="." unique_id=1230864380 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 2.4, 0)
+
+[node name="Ball15" parent="." unique_id=1585974369 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 2.4, 0)
+
+[node name="Ball16" parent="." unique_id=330654856 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6, 0)
+
+[node name="Ball17" parent="." unique_id=584491859 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.6, 0)
+
+[node name="Ball18" parent="." unique_id=891350547 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 3.6, 0)
+
+[node name="Ball19" parent="." unique_id=1029423390 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 3.6, 0)
+
+[node name="Ball20" parent="." unique_id=1338416399 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 3.6, 0)
+
+[node name="Ball21" parent="." unique_id=969035292 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.8, 0)
+
+[node name="Ball22" parent="." unique_id=819354214 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 4.8, 0)
+
+[node name="Ball23" parent="." unique_id=1966228672 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 4.8, 0)
+
+[node name="Ball24" parent="." unique_id=127514112 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 4.8, 0)
+
+[node name="Ball25" parent="." unique_id=1201823749 instance=ExtResource("1_karic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 4.8, 0)

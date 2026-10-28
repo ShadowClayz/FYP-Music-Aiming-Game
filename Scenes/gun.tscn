@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://1mw385wevtao"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dt2y"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_3dt2y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Meshes:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nxj5y"]
+resource_name = "Shoot"
+length = 0.07
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meshes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.06, 0.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.04), Vector3(0, 0, -0.005), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Meshes:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.06, 0.07),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.034906585, 0, 0), Vector3(-0.017453292, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oqrbh"]
+_data = {
+&"RESET": SubResource("Animation_3dt2y"),
+&"Shoot": SubResource("Animation_nxj5y")
+}
+
+[node name="Gun" type="Node3D" unique_id=105639386]
+
+[node name="Meshes" type="Node3D" parent="." unique_id=2048233196]
+
+[node name="Gun" type="CSGBox3D" parent="Meshes" unique_id=848113787]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.036021948)
+material_override = SubResource("StandardMaterial3D_3dt2y")
+size = Vector3(0.1, 0.1, 0.74880177)
+
+[node name="Gun2" type="CSGBox3D" parent="Meshes" unique_id=879720622]
+transform = Transform3D(0.9999998, 0, 0, 0, -0.21612325, 0.97636604, 0, -0.97636604, -0.21612325, 0, -0.10088312, 0.21580854)
+material_override = SubResource("StandardMaterial3D_3dt2y")
+size = Vector3(0.1, 0.1, 0.22394922)
+
+[node name="Gun3" type="CSGBox3D" parent="Meshes" unique_id=1820105806]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.067789555, -0.19286351)
+material_override = SubResource("StandardMaterial3D_3dt2y")
+size = Vector3(0.1, 0.1, 0.20588282)
+
+[node name="Gun4" type="CSGBox3D" parent="Meshes" unique_id=251982476]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.97423106, 0.22555232, 0, -0.22555232, 0.97423106, 0, 0.016708907, 0.17296836)
+material_override = SubResource("StandardMaterial3D_3dt2y")
+size = Vector3(0.1, 0.1, 0.14741796)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1255359821]
+libraries/ = SubResource("AnimationLibrary_oqrbh")
+autoplay = &"Shoot"

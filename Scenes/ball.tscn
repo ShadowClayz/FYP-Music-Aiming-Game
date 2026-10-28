@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ux33xj0ejboa"]
+
+[ext_resource type="Script" uid="uid://beijpqkwtvy7s" path="res://Scripts/ball.gd" id="1_d60mj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdfty"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ni7q4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_brhb4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ni7q4"]
+radius = 0.49771166
+
+[node name="Ball" type="Node3D" unique_id=669377245 groups=["Balls"]]
+script = ExtResource("1_d60mj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1873998509]
+layers = 2
+material_override = SubResource("StandardMaterial3D_jdfty")
+mesh = SubResource("SphereMesh_ni7q4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=633442470]
+physics_material_override = SubResource("PhysicsMaterial_brhb4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1091103396]
+shape = SubResource("SphereShape3D_ni7q4")
